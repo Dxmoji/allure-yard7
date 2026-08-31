@@ -1,0 +1,1808 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Allure Yard Clinics | كلينك زهراء المعادي</title>
+
+<meta
+  name="description"
+  content="Allure Yard Clinics في زهراء المعادي. خدمات الليزر والعناية بالبشرة والتجميل مع حجز سريع عبر واتساب."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Tajawal:wght@300;400;500;700&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+
+:root{
+  --ink:#3B2E2A;
+  --paper:#FDF6F2;
+  --paper-2:#F5E6DD;
+  --rose:#C98A87;
+  --rose-deep:#A85D5F;
+  --sage:#93A88C;
+  --lavender:#B7A4C9;
+  --peach:#F0B896;
+  --gold:#D4A574;
+  --whatsapp:#25D366;
+  --white:#FFFFFF;
+  --muted:#7A6C66;
+  --border:rgba(59,46,42,.09);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body{
+  font-family:'Tajawal',sans-serif;
+  background:
+    radial-gradient(
+      ellipse 900px 500px at 15% -5%,
+      rgba(240,184,150,.25),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 700px 500px at 90% 10%,
+      rgba(183,164,201,.20),
+      transparent
+    ),
+    var(--paper);
+  color:var(--ink);
+  line-height:1.8;
+  overflow-x:hidden;
+  letter-spacing:.1px;
+}
+
+h1,
+h2,
+h3{
+  font-family:'Almarai',sans-serif;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a:focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:4px;
+  border-radius:8px;
+}
+
+section{
+  padding:100px 8vw;
+  position:relative;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
+}
+
+.reveal.in-view{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.eyebrow{
+  font-weight:700;
+  color:var(--rose-deep);
+  font-size:.95rem;
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.eyebrow::before{
+  content:"";
+  width:28px;
+  height:2px;
+  background:var(--rose);
+  display:inline-block;
+}
+
+.btn-primary{
+  background:var(--whatsapp);
+  color:#fff;
+  padding:15px 30px;
+  border-radius:30px;
+  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  box-shadow:0 10px 25px -8px rgba(37,211,102,.55);
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 30px -8px rgba(37,211,102,.65);
+}
+
+.btn-ghost{
+  border:1.5px solid var(--rose);
+  color:var(--rose-deep);
+  padding:15px 30px;
+  border-radius:30px;
+  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:
+    background .2s ease,
+    color .2s ease;
+}
+
+.btn-ghost:hover{
+  background:var(--rose);
+  color:#fff;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(253,246,242,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:16px 8vw;
+}
+
+.logo{
+  font-family:'Almarai',sans-serif;
+  font-size:1.25rem;
+  font-weight:800;
+  white-space:nowrap;
+}
+
+.logo span{
+  color:var(--rose-deep);
+}
+
+.nav-links{
+  display:flex;
+  gap:32px;
+  font-weight:500;
+}
+
+.nav-links a{
+  position:relative;
+  padding:4px 0;
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  bottom:-2px;
+  right:0;
+  left:0;
+  height:2px;
+  background:var(--rose);
+  transform:scaleX(0);
+  transition:transform .25s ease;
+}
+
+.nav-links a:hover::after{
+  transform:scaleX(1);
+}
+
+.nav-cta{
+  background:var(--whatsapp);
+  color:#fff;
+  padding:10px 20px;
+  border-radius:30px;
+  font-weight:700;
+  white-space:nowrap;
+  transition:transform .2s ease;
+}
+
+.nav-cta:hover{
+  transform:translateY(-2px);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  max-width:1400px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:70px;
+  align-items:center;
+  padding-top:70px;
+  padding-bottom:80px;
+  overflow:hidden;
+}
+
+.blob{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(60px);
+  opacity:.5;
+  z-index:-1;
+  pointer-events:none;
+  animation:float 9s ease-in-out infinite;
+}
+
+.blob-1{
+  width:260px;
+  height:260px;
+  background:var(--peach);
+  top:-60px;
+  right:5%;
+}
+
+.blob-2{
+  width:200px;
+  height:200px;
+  background:var(--lavender);
+  bottom:-40px;
+  left:8%;
+  animation-delay:-3s;
+}
+
+.blob-3{
+  width:160px;
+  height:160px;
+  background:var(--sage);
+  top:40%;
+  left:42%;
+  animation-delay:-6s;
+  opacity:.3;
+}
+
+@keyframes float{
+
+  0%,
+  100%{
+    transform:translateY(0) scale(1);
+  }
+
+  50%{
+    transform:translateY(-22px) scale(1.06);
+  }
+
+}
+
+.hero h1{
+  font-size:clamp(2.2rem,4vw,3.25rem);
+  font-weight:800;
+  line-height:1.4;
+  margin-bottom:22px;
+}
+
+.hero h1 em{
+  font-style:normal;
+  background:
+    linear-gradient(
+      90deg,
+      var(--rose-deep),
+      var(--gold)
+    );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  color:var(--muted);
+  font-size:1.1rem;
+  max-width:540px;
+  margin-bottom:32px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.trust-row{
+  display:flex;
+  gap:38px;
+  margin-top:42px;
+  flex-wrap:wrap;
+}
+
+.trust-row div{
+  text-align:right;
+}
+
+.trust-row strong{
+  font-family:'Almarai',sans-serif;
+  font-size:1.55rem;
+  color:var(--ink);
+  display:block;
+}
+
+.trust-row span{
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+.hero-visual{
+  position:relative;
+  aspect-ratio:4/5;
+  border-radius:
+    42% 58% 63% 37% /
+    47% 40% 60% 53%;
+  overflow:hidden;
+  box-shadow:
+    0 30px 60px -25px
+    rgba(168,93,95,.35);
+}
+
+.hero-visual img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.hero-visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(59,46,42,0) 40%,
+      rgba(59,46,42,.45) 100%
+    );
+}
+
+.badge{
+  position:absolute;
+  bottom:30px;
+  right:30px;
+  left:30px;
+  background:rgba(255,255,255,.96);
+  border-radius:20px;
+  padding:16px 20px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  box-shadow:
+    0 15px 30px -10px
+    rgba(0,0,0,.30);
+  z-index:2;
+}
+
+.badge-dot{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:
+    linear-gradient(
+      135deg,
+      var(--rose),
+      var(--gold)
+    );
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-weight:800;
+  flex-shrink:0;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider{
+  width:100%;
+  height:70px;
+  display:block;
+}
+
+.divider path{
+  fill:#FFFBF9;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+  background:
+    linear-gradient(
+      180deg,
+      var(--white),
+      #FFFBF9
+    );
+}
+
+.section-head{
+  max-width:650px;
+  margin-bottom:54px;
+}
+
+.section-head h2{
+  font-size:clamp(1.8rem,3vw,2.4rem);
+  font-weight:800;
+  line-height:1.5;
+}
+
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.card{
+  background:var(--paper);
+  border-radius:22px;
+  padding:30px 26px;
+  border:1px solid var(--paper-2);
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.card:hover{
+  transform:translateY(-7px);
+  box-shadow:
+    0 24px 40px -18px
+    rgba(168,93,95,.28);
+  border-color:
+    rgba(201,138,135,.65);
+}
+
+.card .num{
+  font-family:'Almarai',sans-serif;
+  font-weight:800;
+  color:var(--gold);
+  font-size:.9rem;
+  margin-bottom:16px;
+  display:block;
+}
+
+.card h3{
+  font-size:1.15rem;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+.services-cta{
+  text-align:center;
+  margin-top:50px;
+}
+
+.services-cta p{
+  color:var(--muted);
+  margin-bottom:14px;
+}
+
+/* =========================
+   VIBE
+========================= */
+
+.vibe{
+  text-align:center;
+  background:
+    linear-gradient(
+      135deg,
+      var(--paper-2),
+      var(--paper)
+    );
+  overflow:hidden;
+}
+
+.vibe::before,
+.vibe::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  filter:blur(50px);
+  opacity:.4;
+}
+
+.vibe::before{
+  width:220px;
+  height:220px;
+  background:var(--lavender);
+  top:-60px;
+  left:10%;
+}
+
+.vibe::after{
+  width:180px;
+  height:180px;
+  background:var(--peach);
+  bottom:-50px;
+  right:12%;
+}
+
+.vibe p{
+  font-family:'Almarai',sans-serif;
+  font-weight:700;
+  font-size:clamp(1.3rem,2.4vw,1.8rem);
+  max-width:720px;
+  margin:0 auto;
+  color:var(--ink);
+  position:relative;
+  z-index:1;
+  line-height:1.7;
+}
+
+.vibe span{
+  display:block;
+  margin-top:16px;
+  color:var(--muted);
+  font-size:.95rem;
+  position:relative;
+  z-index:1;
+}
+
+/* =========================
+   WHY US
+========================= */
+
+.why{
+  background:#FFFBF9;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.why-card{
+  padding:30px;
+  background:#fff;
+  border-radius:22px;
+  border:1px solid var(--border);
+}
+
+.why-icon{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--paper-2);
+  font-size:1.2rem;
+  margin-bottom:18px;
+}
+
+.why-card h3{
+  font-size:1.1rem;
+  margin-bottom:8px;
+}
+
+.why-card p{
+  color:var(--muted);
+  font-size:.94rem;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-visual{
+  aspect-ratio:1/1;
+  border-radius:
+    58% 42% 40% 60% /
+    55% 48% 52% 45%;
+  overflow:hidden;
+  box-shadow:
+    0 25px 50px -20px
+    rgba(147,168,140,.4);
+}
+
+.about-visual img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.about h2{
+  font-size:clamp(1.8rem,3vw,2.3rem);
+  margin-bottom:22px;
+}
+
+.about p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.stat-strip{
+  display:flex;
+  gap:40px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+
+.stat-strip strong{
+  font-family:'Almarai',sans-serif;
+  font-size:2rem;
+  color:var(--sage);
+  display:block;
+}
+
+.stat-strip span{
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+  background:
+    linear-gradient(
+      160deg,
+      var(--ink),
+      #4A3530
+    );
+  color:var(--paper);
+}
+
+.contact-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.contact .eyebrow{
+  color:var(--rose);
+}
+
+.contact h2{
+  color:#fff;
+  font-size:clamp(1.8rem,3vw,2.3rem);
+  margin-bottom:20px;
+}
+
+.contact p{
+  color:rgba(251,244,241,.75);
+  margin-bottom:28px;
+  max-width:450px;
+}
+
+.contact-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.contact-list li{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:rgba(251,244,241,.9);
+}
+
+.contact-list a:hover{
+  color:#fff;
+}
+
+.icon-dot{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:rgba(255,255,255,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.map-box{
+  border-radius:22px;
+  overflow:hidden;
+  aspect-ratio:4/3;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:rgba(251,244,241,.55);
+  text-align:center;
+  padding:20px;
+}
+
+.map-box strong{
+  color:#fff;
+  display:block;
+  margin-bottom:5px;
+}
+
+.map-box small{
+  display:block;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:var(--ink);
+  border-top:1px solid rgba(255,255,255,.1);
+  padding:26px 8vw;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:rgba(251,244,241,.6);
+  font-size:.85rem;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+.social-links{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.social-links a{
+  transition:color .2s ease;
+}
+
+.social-links a:hover{
+  color:#fff;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.wa-float{
+  position:fixed;
+  bottom:24px;
+  left:24px;
+  z-index:60;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:var(--whatsapp);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:
+    0 12px 28px -8px
+    rgba(37,211,102,.6);
+  animation:pulse 2.4s infinite;
+}
+
+.wa-float:hover{
+  transform:scale(1.05);
+}
+
+@keyframes pulse{
+
+  0%{
+    box-shadow:
+      0 0 0 0
+      rgba(37,211,102,.45);
+  }
+
+  70%{
+    box-shadow:
+      0 0 0 14px
+      rgba(37,211,102,0);
+  }
+
+  100%{
+    box-shadow:
+      0 0 0 0
+      rgba(37,211,102,0);
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:900px){
+
+  section{
+    padding:70px 6vw;
+  }
+
+  .nav{
+    padding:13px 6vw;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav-cta{
+    padding:9px 16px;
+    font-size:.88rem;
+  }
+
+  .hero,
+  .about,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    gap:45px;
+    padding-top:45px;
+  }
+
+  .hero-visual{
+    order:-1;
+    width:min(100%,520px);
+    margin:auto;
+  }
+
+  .hero-copy{
+    text-align:center;
+  }
+
+  .hero .eyebrow{
+    justify-content:center;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-actions{
+    justify-content:center;
+  }
+
+  .trust-row{
+    justify-content:center;
+  }
+
+  .grid-3,
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-visual{
+    width:min(100%,520px);
+    margin:auto;
+  }
+
+  .about-copy{
+    text-align:center;
+  }
+
+  .about-copy .eyebrow{
+    justify-content:center;
+  }
+
+  .stat-strip{
+    justify-content:center;
+  }
+
+  .contact-grid{
+    gap:40px;
+  }
+
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width:560px){
+
+  .logo{
+    font-size:1.05rem;
+  }
+
+  .nav-cta{
+    font-size:.82rem;
+    padding:8px 13px;
+  }
+
+  .hero h1{
+    font-size:2rem;
+  }
+
+  .hero p{
+    font-size:1rem;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    width:100%;
+  }
+
+  .btn-primary,
+  .btn-ghost{
+    width:100%;
+  }
+
+  .trust-row{
+    gap:22px;
+  }
+
+  .trust-row strong{
+    font-size:1.35rem;
+  }
+
+  .badge{
+    right:18px;
+    left:18px;
+    bottom:18px;
+  }
+
+  .wa-float{
+    width:56px;
+    height:56px;
+    left:18px;
+    bottom:18px;
+  }
+
+  footer{
+    text-align:center;
+    justify-content:center;
+  }
+
+  .social-links{
+    width:100%;
+    justify-content:center;
+  }
+
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .reveal{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+
+  .blob,
+  .wa-float{
+    animation:none;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+  <div class="nav">
+
+    <a href="#home" class="logo">
+      Allure <span>Yard</span>
+    </a>
+
+    <nav
+      class="nav-links"
+      aria-label="التنقل الرئيسي"
+    >
+
+      <a href="#home">
+        الرئيسية
+      </a>
+
+      <a href="#services">
+        الخدمات
+      </a>
+
+      <a href="#why">
+        ليه Allure Yard؟
+      </a>
+
+      <a href="#about">
+        من نحن
+      </a>
+
+      <a href="#contact">
+        تواصل معنا
+      </a>
+
+    </nav>
+
+    <a
+      class="nav-cta"
+      href="https://wa.me/201288010080?text=مرحباً،%20أرغب%20في%20حجز%20موعد%20في%20Allure%20Yard"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      احجزي عبر واتساب
+    </a>
+
+  </div>
+
+</header>
+
+
+<main>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section
+  class="hero"
+  id="home"
+>
+
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+
+  <div class="hero-copy reveal">
+
+    <div class="eyebrow">
+      كلينك زهراء المعادي
+    </div>
+
+    <h1>
+      بشرتك تستاهل عناية
+      <em>هادئة وحقيقية</em>
+    </h1>
+
+    <p>
+      جلسات ليزر وعناية بالبشرة والتجميل في أجواء هادئة ومريحة،
+      مع حجز سريع وسهل مباشرة عبر واتساب.
+    </p>
+
+
+    <div class="hero-actions">
+
+      <a
+        class="btn-primary"
+        href="https://wa.me/201288010080?text=مرحباً،%20أرغب%20في%20حجز%20موعد%20في%20Allure%20Yard"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        احجزي جلستك دلوقتي
+      </a>
+
+      <a
+        class="btn-ghost"
+        href="#services"
+      >
+        شوفي الخدمات
+      </a>
+
+    </div>
+
+
+    <div class="trust-row">
+
+      <div>
+
+        <strong>
+          5.0 ★
+        </strong>
+
+        <span>
+          تقييم العملاء
+        </span>
+
+      </div>
+
+      <div>
+
+        <strong>
+          24س
+        </strong>
+
+        <span>
+          رد سريع على واتساب
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-visual reveal">
+
+    <img
+      src="https://images.unsplash.com/photo-1616391182219-e080b4d1043a?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+      alt="أجواء هادئة للعناية بالبشرة"
+      width="800"
+      height="1000"
+    >
+
+    <div class="badge">
+
+      <div class="badge-dot">
+        ★
+      </div>
+
+      <div>
+
+        <strong
+          style="
+            font-family:'Almarai',sans-serif;
+            display:block;
+          "
+        >
+          تقييم ٥ / ٥
+        </strong>
+
+        <span
+          style="
+            font-size:.85rem;
+            color:var(--muted);
+          "
+        >
+          من تقييمات العملاء على جوجل
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<svg
+  class="divider"
+  viewBox="0 0 1440 70"
+  preserveAspectRatio="none"
+  aria-hidden="true"
+>
+
+  <path
+    d="
+      M0,40
+      C280,90 420,0 720,30
+      C1020,60 1160,10 1440,40
+      L1440,70
+      L0,70 Z
+    "
+  ></path>
+
+</svg>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section
+  class="services"
+  id="services"
+>
+
+  <div class="section-head reveal">
+
+    <div class="eyebrow">
+      خدماتنا
+    </div>
+
+    <h2>
+      عناية شاملة ببشرتك في مكان واحد
+    </h2>
+
+  </div>
+
+
+  <div class="grid-3">
+
+    <article class="card reveal">
+
+      <span class="num">
+        01
+      </span>
+
+      <h3>
+        إزالة الشعر بالليزر
+      </h3>
+
+      <p>
+        جلسات ليزر مصممة حسب احتياجات البشرة ومنطقة العلاج.
+      </p>
+
+    </article>
+
+
+    <article class="card reveal">
+
+      <span class="num">
+        02
+      </span>
+
+      <h3>
+        تنظيف ونضارة البشرة
+      </h3>
+
+      <p>
+        جلسات عناية وتنظيف تساعد على تحسين مظهر البشرة ومنحها نضارة وانتعاش.
+      </p>
+
+    </article>
+
+
+    <article class="card reveal">
+
+      <span class="num">
+        03
+      </span>
+
+      <h3>
+        علاج حب الشباب والتصبغات
+      </h3>
+
+      <p>
+        خيارات عناية وعلاج يتم تحديدها حسب حالة البشرة واحتياجاتها.
+      </p>
+
+    </article>
+
+
+    <article class="card reveal">
+
+      <span class="num">
+        04
+      </span>
+
+      <h3>
+        الفيلر والبوتوكس
+      </h3>
+
+      <p>
+        خدمات تجميلية يتم تحديد تفاصيلها بعد الاستشارة والتقييم المناسب.
+      </p>
+
+    </article>
+
+
+    <article class="card reveal">
+
+      <span class="num">
+        05
+      </span>
+
+      <h3>
+        ميزوثيرابي وتغذية البشرة
+      </h3>
+
+      <p>
+        جلسات مخصصة للعناية بالبشرة وتحسين مظهرها حسب احتياجات كل حالة.
+      </p>
+
+    </article>
+
+
+    <article class="card reveal">
+
+      <span class="num">
+        06
+      </span>
+
+      <h3>
+        استشارات تجميلية
+      </h3>
+
+      <p>
+        تواصلي معنا لمعرفة الخدمة الأنسب لكِ وخطة العناية المناسبة.
+      </p>
+
+    </article>
+
+  </div>
+
+
+  <div class="services-cta reveal">
+
+    <p>
+      مش عارفة أنسب خدمة ليكي؟
+    </p>
+
+    <a
+      class="btn-primary"
+      href="https://wa.me/201288010080?text=مرحباً،%20أرغب%20في%20معرفة%20الخدمة%20المناسبة%20لي"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      اسألي على واتساب
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     VIBE
+========================= -->
+
+<section class="vibe">
+
+  <p class="reveal">
+    مكان بتحسي فيه إنك واخدة نفس عميق من أول ما تدخلي
+  </p>
+
+  <span>
+    راحة واهتمام بالتفاصيل في كل زيارة.
+  </span>
+
+</section>
+
+
+<!-- =========================
+     WHY US
+========================= -->
+
+<section
+  class="why"
+  id="why"
+>
+
+  <div class="section-head reveal">
+
+    <div class="eyebrow">
+      ليه Allure Yard؟
+    </div>
+
+    <h2>
+      تجربة عناية مريحة من أول خطوة
+    </h2>
+
+  </div>
+
+
+  <div class="why-grid">
+
+    <article class="why-card reveal">
+
+      <div class="why-icon">
+        💬
+      </div>
+
+      <h3>
+        حجز سهل
+      </h3>
+
+      <p>
+        تواصلي مباشرة عبر واتساب واحجزي بدون مكالمات طويلة أو انتظار.
+      </p>
+
+    </article>
+
+
+    <article class="why-card reveal">
+
+      <div class="why-icon">
+        ✨
+      </div>
+
+      <h3>
+        تجربة هادئة
+      </h3>
+
+      <p>
+        أجواء مريحة واهتمام بالتفاصيل عشان تكون الزيارة تجربة لطيفة.
+      </p>
+
+    </article>
+
+
+    <article class="why-card reveal">
+
+      <div class="why-icon">
+        📍
+      </div>
+
+      <h3>
+        في زهراء المعادي
+      </h3>
+
+      <p>
+        موقع مناسب في زهراء المعادي وسهل الوصول إليه.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+  class="about"
+  id="about"
+>
+
+  <div class="about-visual reveal">
+
+    <img
+      src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+      alt="جلسة عناية بالبشرة"
+      loading="lazy"
+      decoding="async"
+      width="800"
+      height="800"
+    >
+
+  </div>
+
+
+  <div class="about-copy reveal">
+
+    <div class="eyebrow">
+      من نحن
+    </div>
+
+    <h2>
+      مساحة هادئة مصممة براحتك
+    </h2>
+
+    <p>
+      Allure Yard مش مجرد كلينك تجميل،
+      ده مكان مصمم عشان تحسي بالراحة والاهتمام من أول لحظة تدخلي فيها.
+    </p>
+
+    <p>
+      بنهتم إنك تعرفي تفاصيل الخدمة وتاخدي وقتك في اختيار الأنسب ليكي.
+    </p>
+
+
+    <div class="stat-strip">
+
+      <div>
+
+        <strong>
+          5.0
+        </strong>
+
+        <span>
+          تقييم جوجل
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+  class="contact"
+  id="contact"
+>
+
+  <div class="contact-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        تواصل معنا
+      </div>
+
+      <h2>
+        جاهزين نستقبل حجزك
+      </h2>
+
+      <p>
+        ابعتي رسالة على واتساب وهنرد عليكِ بأقرب وقت،
+        أو زورينا في الكلينك مباشرة.
+      </p>
+
+
+      <ul class="contact-list">
+
+        <li>
+
+          <span class="icon-dot">
+            📍
+          </span>
+
+          <span>
+            أوتوستراد شرق، ٢ زهراء المعادي، القاهرة
+          </span>
+
+        </li>
+
+
+        <li>
+
+          <span class="icon-dot">
+            🕐
+          </span>
+
+          <span>
+            يوميًا من ١٠ صباحًا لـ ١٠ مساءً
+            <br>
+            الجمعة إجازة
+          </span>
+
+        </li>
+
+
+        <li>
+
+          <span class="icon-dot">
+            📞
+          </span>
+
+          <a href="tel:+201288010080">
+            012 8801 0080
+          </a>
+
+        </li>
+
+      </ul>
+
+
+      <br>
+
+
+      <a
+        class="btn-primary"
+        href="https://wa.me/201288010080?text=مرحباً،%20أرغب%20في%20حجز%20موعد%20في%20Allure%20Yard"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        تواصلي معنا على واتساب
+      </a>
+
+    </div>
+
+
+    <div class="map-box">
+
+      <!--
+        استبدلي هذا البلوك بـ Google Maps Embed
+        بعد الحصول على رابط الموقع الصحيح للكلينك.
+      -->
+
+      <div>
+
+        <strong>
+          📍 موقع Allure Yard
+        </strong>
+
+        <small>
+          أوتوستراد شرق، ٢ زهراء المعادي، القاهرة
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div>
+    © 2026 Allure Yard Clinics - زهراء المعادي
+  </div>
+
+
+  <div class="social-links">
+
+    <a
+      href="https://www.instagram.com/clinicayeg/?hl=en"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+    >
+      Instagram
+    </a>
+
+    <span>
+      •
+    </span>
+
+    <a
+      href="https://www.facebook.com/ClinicAYEG/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+    >
+      Facebook
+    </a>
+
+  </div>
+
+
+  <div>
+    تصميم الموقع بواسطة [اسمك]
+  </div>
+
+</footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+  class="wa-float"
+  href="https://wa.me/201288010080?text=مرحباً،%20أرغب%20في%20حجز%20موعد%20في%20Allure%20Yard"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="تواصل عبر واتساب"
+>
+
+  <svg
+    width="30"
+    height="30"
+    viewBox="0 0 32 32"
+    fill="white"
+    aria-hidden="true"
+  >
+
+    <path
+      d="
+        M16.001 3
+        C9.383 3 4 8.383 4 15.001
+        c0 2.386.7 4.607 1.909 6.472
+        L4 29l7.72-1.868
+        A11.94 11.94 0 0 0 16.001 27
+        C22.619 27 28 21.619 28 15.001
+        C28 8.383 22.619 3 16.001 3
+        zm6.994 17.06
+        c-.297.836-1.469 1.53-2.406 1.73
+        -.64.137-1.475.246-4.287-.921
+        -3.596-1.49-5.91-5.13-6.09-5.37
+        -.178-.24-1.454-1.936-1.454-3.694
+        0-1.759.914-2.62 1.24-2.98
+        .297-.328.65-.41.867-.41
+        .217 0 .434.002.624.011
+        .2.01.468-.076.732.559
+        .297.712.995 2.457 1.082 2.636
+        .086.18.144.39.028.63
+        -.116.24-.174.39-.34.6
+        -.166.211-.35.47-.5.63
+        -.166.18-.34.376-.146.735
+        .194.36.86 1.42 1.848 2.302
+        1.27 1.133 2.34 1.484 2.7 1.65
+        .36.166.57.14.78-.084
+        .21-.223.898-1.045 1.14-1.404
+        .24-.359.48-.3.808-.18
+        .328.12 2.08.982 2.437 1.16
+        .359.18.598.27.686.42
+        .088.15.088.87-.209 1.706z
+      "
+    />
+
+  </svg>
+
+</a>
+
+
+<script>
+
+const revealEls =
+  document.querySelectorAll('.reveal');
+
+const observer =
+  new IntersectionObserver(
+
+    (entries) => {
+
+      entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add('in-view');
+
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold:0.12
+    }
+
+  );
+
+revealEls.forEach(el => {
+  observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
+```
